@@ -12,7 +12,7 @@ RUN mkdir /etc/knot/zones
 COPY knot.conf /etc/knot/knot.conf
 RUN /usr/lib/knot/prepare-environment /etc/knot/knot.conf
 
-EXPOSE 53
+EXPOSE 53/udp 53/tcp
 
 ENTRYPOINT ["/usr/sbin/knotd","-c","/etc/knot/knot.conf"]
 
