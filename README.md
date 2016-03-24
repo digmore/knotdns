@@ -50,8 +50,7 @@ mail    A       192.0.2.3
 ```
 Launching the knotdns container on a single public address:
 
-    docker run -d --name=knotdns -p 198.51.100.8:53:53 -p
-198.51.100.8:53:53/udp -v /opt/knotzones:/etc/knot/zones:ro digmore/knotdns
+    docker run -d --name=knotdns -p 198.51.100.8:53:53 -p198.51.100.8:53:53/udp -v /opt/knotzones:/etc/knot/zones:ro digmore/knotdns
     
 You should swap out `198.51.100.8` for your own IP address of course.
 
